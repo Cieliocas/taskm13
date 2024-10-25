@@ -4,48 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Arts</title>
+    <meta name="description" content="Portfólio de artes digitais com diversas galerias, cards e uma sessão de contato.">
+    <meta name="keywords" content="arte digital, portfólio, pop art, design gráfico">
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <style>
+
         .navbar-nav .nav-link.active {
             color: #fff;
         }
-
         .nav-link {
             text-align: center;
         }
-
-        .card {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: brightness(0) invert(1);
-        }
-
+        
         section {
-            background-color: #343a40af; 
-            padding-top: 70px;
+            background-color: #343a40af;
+            padding: 40px 20px;
+            margin-bottom: 80px; 
             color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
 
         header {
             position: sticky;
             top: 0;
             left: 0;
-            background-color: #222129; 
+            background-color: #222129;
+            z-index: 1000;
         }
 
         h2 {
             color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
         }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            height: 500px;
+        }
+
+        .card-img {
+        height: 100%;
+        object-fit: cover; /* Ajusta a imagem para cobrir a área do card */
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6); 
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .carousel {
+            box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px;
+            margin-bottom: 30px;
+        }
+
     </style>
 </head>
 
@@ -53,12 +73,12 @@
     <header id="cabecalho">
         <div class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <h1 class="display-6 ">Digital Arts</h1>
+                <h1 class="display-6">Digital Arts</h1>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <nav class="collapse navbar-collapse justify-content-end" id="menu">
-                    <ul class="nav navbar-nav nav-pills">
+                    <ul class="navbar-nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link active" href="#slides">Slides</a>
                         </li>
@@ -75,107 +95,140 @@
     </header>
 
     <div data-bs-spy="scroll" data-bs-target="#cabecalho" class="container">
-        <section id="slides">
-            <h2>Slides</h2>
-            <div class="container w-50">
-                <div id="carousel-exemplo" class="carousel carousel-fade slide w-100" data-bs-ride="carousel">
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho" class="container">
+            <section id="slides" style="padding-top: 100px;">
+                <h2>Slides</h2>
+                <div class="container w-75">
+                    <div id="carousel-exemplo" class="carousel slide carousel-fade w-100" data-bs-ride="carousel">
+                        <!-- Conteúdo do Carousel -->
                     <div class="carousel-inner">
-                        <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="https://img.freepik.com/vetores-gratis/retrato-de-design-plano-em-estilo-de-arte-em-cores-brilhantes_52683-74740.jpg?t=st=1729734594~exp=1729738194~hmac=cd28cbef31af1babc2f50891abada2e259739bfa6530c43b065fa2018106796c&w=826">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img class="d-block w-100" src="https://img.freepik.com/vetores-gratis/retrato-de-design-plano-em-estilo-de-arte-em-cores-brilhantes_52683-74740.jpg" alt="Pop art com olhos e rostos">
                             <div class="carousel-caption">
-                                <h2>Pop art com olhos, rostos e cores</h2>
+                                <h6>Pop art com olhos, rostos e cores</h6>
                             </div>
                         </div>
-                        <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://img.freepik.com/fotos-gratis/colagem-monocromatica-de-meio-tom_23-2151004997.jpg?t=st=1729734607~exp=1729738207~hmac=869d9ad8e040fe014c868d44c142d71587f19d0319388f587bfaa4ce1e6e8e0f&w=826">
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="d-block w-100" src="https://img.freepik.com/fotos-gratis/colagem-monocromatica-de-meio-tom_23-2151004997.jpg" alt="Arte com boca, nariz e jornal">
                             <div class="carousel-caption">
-                                <h2>Arte com boca, nariz e jornal</h2>
+                                <h6>Arte com boca, nariz e jornal</h6>
                             </div>
                         </div>
-                        <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="https://img.freepik.com/vetores-gratis/postagem-de-namoro-online-correspondente-a-estatua-do-deus-grego-em-midia-social-estetica_53876-114651.jpg?t=st=1729734619~exp=1729738219~hmac=dc1deac57f0bddac9acdf95224d116041d405674a3769e9d74b796cea8be7a24&w=826">
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img class="d-block w-100" src="https://img.freepik.com/vetores-gratis/postagem-de-namoro-online-correspondente-a-estatua-do-deus-grego-em-midia-social-estetica_53876-114651.jpg" alt="Arte da Estátua e Smartphone">
                             <div class="carousel-caption">
-                                <h2>Arte da Estatua e do Smartphone</h2>
+                                <h6>Arte da Estátua e Smartphone</h6>
                             </div>
                         </div>
                     </div>
-                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button" aria-label="Anterior">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-exemplo" data-bs-slide="prev" aria-label="Anterior">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </button>
-                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button" aria-label="Próximo">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-exemplo" data-bs-slide="next" aria-label="Próximo">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </button>
-                    
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
-                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                </div>
+                <div class="container">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nisi exercitationem autem maxime error quibusdam quos odit explicabo mollitia. Beatae molestias eum explicabo nulla deleniti cum, ducimus doloremque pariatur odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis quae, ea quasi velit commodi vero autem explicabo ullam rerum placeat qui maiores ipsum repellendus corrupti tempore sit ratione deserunt dolor!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cards">
+            <h2>Cards</h2>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="https://i.pinimg.com/736x/7e/ee/bd/7eeebd9cff4c8dc78b7601e2c069a4c3.jpg" class="card-img" alt="Descrição da imagem">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="https://dcdn.mitiendanube.com/stores/333/141/products/jg221-ac5da0dab32e9752b615119418942717-640-0.png" class="card-img" alt="Descrição da imagem">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="https://i.pinimg.com/564x/0f/c5/cc/0fc5cc71f1a9eb46864148ca0256e84a.jpg" class="card-img" alt="Descrição da imagem">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="https://i.pinimg.com/736x/20/3b/79/203b79270c090cf1a5cf70b7c5fbb0ef.jpg" class="card-img" alt="Descrição da imagem">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="https://i.pinimg.com/originals/31/52/a7/3152a7f63edb70e7e549b6bf5fddce47.jpg" class="card-img" alt="Descrição da imagem">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-bg-dark">
+                            <img src="https://pt-static.z-dn.net/files/daa/3fcadea98ccf2ac32e468b9e43e7cc90.jpg" class="card-img" alt="Descrição da imagem">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        
-        <section id="cards">
-            <h2>Cards</h2>
-            <div class="container w-75">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card text-bg-dark">
-                            <img src="https://i.pinimg.com/736x/7e/ee/bd/7eeebd9cff4c8dc78b7601e2c069a4c3.jpg" alt="">
-                            <div class="card-img-overlay">
-                                <h4 class="card-title">Título do Card</h4>
-                                <h5 class="card-subtitle">Subtítulo do card</h5>
-                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
-                                <a href="#" class="btn btn-primary">Botão Link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card text-bg-dark">
-                            <img src="https://dcdn.mitiendanube.com/stores/333/141/products/jg221-ac5da0dab32e9752b615119418942717-640-0.png" alt="">
-                            <div class="card-img-overlay">
-                                <h4 class="card-title">Título do Card</h4>
-                                <h5 class="card-subtitle">Subtítulo do card</h5>
-                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
-                                <a href="#" class="btn btn-primary">Botão Link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card text-bg-dark">
-                            <img src="https://i.pinimg.com/564x/0f/c5/cc/0fc5cc71f1a9eb46864148ca0256e84a.jpg" alt="">
-                            <div class="card-img-overlay">
-                                <h4 class="card-title">Título do Card</h4>
-                                <h5 class="card-subtitle">Subtítulo do card</h5>
-                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
-                                <a href="#" class="btn btn-primary">Botão Link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="contato">
             <h2>Contato</h2>
             <div class="container w-50">
-                <div class="row">
-                    <div class="col">
-                        <form>
-                            <label class="form-label" for="nome">Seu nome:</label>
-                            <input class="form-control" type="text" id="none">
-                            <label for="email" class="form-label">Seu e-mail</label>
-                            <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com">
-                            <label for="mensagem" class="form-label">Sua mensagem</label>
-                            <textarea id="mensagem" class="form-control"></textarea>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="aceito-termos">
-                                <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
-                            </div>
-                            <button class="btn btn-success">Enviar</button>
-                        </form>
+                <form>
+                    <label class="form-label" for="nome">Seu nome:</label>
+                    <input class="form-control" type="text" id="nome" required>
+                    
+                    <label class="form-label" for="email">Seu e-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+                    
+                    <label class="form-label" for="mensagem">Sua mensagem:</label>
+                    <textarea id="mensagem" class="form-control" required></textarea>
+                    
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="aceito-termos" required>
+                        <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
                     </div>
-                </div>
+                    <button class="btn btn-success">Enviar</button>
+                </form>
             </div>
         </section>
     </div>
