@@ -3,39 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Arts</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <style>
-        .navbar-nav nav.link.active {
+        .navbar-nav .nav-link.active {
             color: #fff;
         }
 
         .nav-link {
             text-align: center;
         }
-        
+
         section {
-            height: 50em;
-            background-color: #d5cfdf86;
+            background-color: #343a40; 
             padding-top: 70px;
+            color: #fff; 
         }
 
         header {
             position: sticky;
             top: 0;
             left: 0;
-            /* background-color: #ff000028; */
+            background-color: #222129; 
+        }
+
+        h2 {
+            color: #fff; 
         }
     </style>
-
 </head>
 
-<body>
-    <header class="cabecalho">
-        <div class="navbar navbar-expand-lg ">
+<body class="bg-dark text-light">
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <h1>Title</h1>
-                <button type="button" class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#menu">
+                <h1 class="display-6">Digital Arts</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <nav class="collapse navbar-collapse justify-content-end" id="menu">
@@ -58,25 +61,89 @@
     <div data-bs-spy="scroll" data-bs-target="#cabecalho" class="container">
         <section id="slides">
             <h2>Slides</h2>
-            <div class="container">
-
+            <div class="container w-50">
+                <div id="carousel-exemplo" class="carousel carousel-fade slide w-100" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div data-bs-interval="3000" class="carousel-item active">
+                            <img class="d-block w-100" src="https://img.freepik.com/vetores-gratis/retrato-de-design-plano-em-estilo-de-arte-em-cores-brilhantes_52683-74740.jpg?t=st=1729734594~exp=1729738194~hmac=cd28cbef31af1babc2f50891abada2e259739bfa6530c43b065fa2018106796c&w=826">
+                            <div class="carousel-caption">
+                                <h2>Pop art com olhos, rostos e cores</h2>
+                            </div>
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="https://img.freepik.com/fotos-gratis/colagem-monocromatica-de-meio-tom_23-2151004997.jpg?t=st=1729734607~exp=1729738207~hmac=869d9ad8e040fe014c868d44c142d71587f19d0319388f587bfaa4ce1e6e8e0f&w=826">
+                            <div class="carousel-caption">
+                                <h2>Arte com boca, nariz e jornal</h2>
+                            </div>
+                        </div>
+                        <div data-bs-interval="3000" class="carousel-item">
+                            <img class="d-block w-100" src="https://img.freepik.com/vetores-gratis/postagem-de-namoro-online-correspondente-a-estatua-do-deus-grego-em-midia-social-estetica_53876-114651.jpg?t=st=1729734619~exp=1729738219~hmac=dc1deac57f0bddac9acdf95224d116041d405674a3769e9d74b796cea8be7a24&w=826">
+                            <div class="carousel-caption">
+                                <h2>Arte da Estatua e do Smartphone</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="cards">
-            <h2>Produtos</h2>
+            <h2>Cards</h2>
             <div class="container">
-
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card text-bg-dark">
+                            <img src="https://i.pinimg.com/736x/7e/ee/bd/7eeebd9cff4c8dc78b7601e2c069a4c3.jpg" alt="">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-bg-dark">
+                            <img src="https://dcdn.mitiendanube.com/stores/333/141/products/jg221-ac5da0dab32e9752b615119418942717-640-0.png" alt="">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-bg-dark">
+                            <img src="https://i.pinimg.com/564x/0f/c5/cc/0fc5cc71f1a9eb46864148ca0256e84a.jpg" alt="">
+                            <div class="card-img-overlay">
+                                <h4 class="card-title">Título do Card</h4>
+                                <h5 class="card-subtitle">Subtítulo do card</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit </p>
+                                <a href="#" class="btn btn-primary">Botão Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="Contato">
+        <section id="contato">
             <h2>Promoções</h2>
             <div class="container">
 
             </div>
         </section>
     </div>
-
-
 
     <script src="lib/bootstrap.bundle.min.js"></script>
 </body>
